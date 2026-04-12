@@ -59,17 +59,10 @@ fun Greeting(
     var encryptedDataStoreValue by remember { mutableStateOf("") }
 
     LaunchedEffect(key1 = Unit) {
-        // save the value
-        preferencesDataStoreEncryption.saveStringValue(
-            value = "Hello Encrypted Data Store!",
-            key = stringPreferencesKey(name = "randomKey")
+        encryptDataStore(
+            preferencesDataStoreEncryption = preferencesDataStoreEncryption,
+            encryptedDataStoreValue = { encryptedDataStoreValue = it }
         )
-        // read the value
-        preferencesDataStoreEncryption.getStringValueFlow(
-            key = stringPreferencesKey(name = "randomKey")
-        ).collect {
-            encryptedDataStoreValue = it ?: ""
-        }
     }
 
     Box(
@@ -82,6 +75,23 @@ fun Greeting(
             text = encryptedDataStoreValue,
             modifier = modifier
         )
+    }
+}
+
+private suspend fun encryptDataStore(
+    preferencesDataStoreEncryption: PreferencesDataStoreEncryption,
+    encryptedDataStoreValue: (String) -> Unit,
+) {
+    // save the value
+    preferencesDataStoreEncryption.saveStringValue(
+        value = "Hello Encrypted Data Store!",
+        key = stringPreferencesKey(name = "randomKey")
+    )
+    // read the value
+    preferencesDataStoreEncryption.getStringValueFlow(
+        key = stringPreferencesKey(name = "randomKey")
+    ).collect {
+        encryptedDataStoreValue(it ?: "")
     }
 }
 
