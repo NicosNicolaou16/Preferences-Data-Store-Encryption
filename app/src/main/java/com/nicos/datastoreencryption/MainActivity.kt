@@ -23,8 +23,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.nicos.datastoreencryption.data_store.PreferencesDataStoreEncryption
 import com.nicos.datastoreencryption.ui.theme.DataStoreEncryptionTheme
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     @Inject

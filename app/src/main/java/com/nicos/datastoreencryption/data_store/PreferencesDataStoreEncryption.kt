@@ -12,6 +12,7 @@ import androidx.datastore.tink.AeadSerializer
 import com.google.crypto.tink.Aead
 import com.google.crypto.tink.KeyTemplate
 import com.google.crypto.tink.RegistryConfiguration
+import com.google.crypto.tink.aead.AeadConfig
 import com.google.crypto.tink.aead.PredefinedAeadParameters
 import com.google.crypto.tink.integration.android.AndroidKeysetManager
 import kotlinx.coroutines.flow.Flow
@@ -22,6 +23,10 @@ import javax.inject.Inject
 
 @Stable
 class PreferencesDataStoreEncryption @Inject constructor(private val context: Context) {
+
+    init {
+        AeadConfig.register()
+    }
 
     private val keysetHandle =
         AndroidKeysetManager.Builder()
