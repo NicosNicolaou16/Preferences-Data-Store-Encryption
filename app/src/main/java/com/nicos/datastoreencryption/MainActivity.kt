@@ -61,7 +61,7 @@ fun Greeting(
     LaunchedEffect(Unit) {
         // save the value
         preferencesDataStoreEncryption.saveStringValue(
-            value = "Hello!",
+            value = "Hello Encrypted Data Store!",
             key = stringPreferencesKey(name = "randomKey")
         )
         // read the value
