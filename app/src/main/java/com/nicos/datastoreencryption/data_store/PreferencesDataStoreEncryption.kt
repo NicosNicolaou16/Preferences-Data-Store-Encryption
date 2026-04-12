@@ -1,6 +1,7 @@
 package com.nicos.datastoreencryption.data_store
 
 import android.content.Context
+import androidx.compose.runtime.Stable
 import androidx.datastore.core.DataStore
 import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.Preferences
@@ -19,6 +20,7 @@ import kotlinx.coroutines.flow.map
 import java.io.IOException
 import javax.inject.Inject
 
+@Stable
 class PreferencesDataStoreEncryption @Inject constructor(private val context: Context) {
 
     private val keysetHandle =
@@ -50,14 +52,13 @@ class PreferencesDataStoreEncryption @Inject constructor(private val context: Co
     internal suspend fun saveStringValue(
         value: String,
         key: Preferences.Key<String>,
-        context: Context
     ) {
         context.encryptedPrefsDataStore.edit { saveData ->
             saveData[key] = value
         }
     }
 
-    internal fun getStringValueFlow(key: Preferences.Key<String>, context: Context): Flow<String?> =
+    internal fun getStringValueFlow(key: Preferences.Key<String>): Flow<String?> =
         context.encryptedPrefsDataStore.data
             .catch { exception ->
                 when (exception) {
