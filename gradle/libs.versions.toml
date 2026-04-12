@@ -8,6 +8,9 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.13.0"
 kotlin = "2.3.20"
 composeBom = "2026.03.01"
+hiltVersion = "2.59.2"
+hiltCompilerVersion = "1.3.0"
+kspVersion = "2.3.6"
 dataStoreVersion = "1.3.0-alpha07"
 
 [libraries]
@@ -29,8 +32,14 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 preference-data-store = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStoreVersion" }
 preference-data-store-tink = { group = "androidx.datastore", name = "datastore-tink", version.ref = "dataStoreVersion" }
 preference-data-store-core = { group = "androidx.datastore", name = "datastore-preferences-core", version.ref = "dataStoreVersion" }
+# Hilt
+dagger-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion" }
+dagger-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hiltVersion" }
+hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompilerVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
 
