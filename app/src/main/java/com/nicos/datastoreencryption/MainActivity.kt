@@ -58,7 +58,7 @@ fun Greeting(
 
     var encryptedDataStoreValue by remember { mutableStateOf("") }
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(key1 = Unit) {
         // save the value
         preferencesDataStoreEncryption.saveStringValue(
             value = "Hello Encrypted Data Store!",
