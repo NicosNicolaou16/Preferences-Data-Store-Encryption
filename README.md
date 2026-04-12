@@ -15,7 +15,7 @@ A robust Android demonstration project showcasing how to implement secure, encry
 
 ## ✨ Features
 
-*   **Secure Storage:** Implements **Jetpack DataStore (Proto)** for typed data storage with an added layer of encryption.
+*   **Secure Storage:** Implements **Jetpack DataStore (Preferences)** for typed data storage with an added layer of encryption.
 *   **AES Encryption:** Utilizes the **Android Keystore System** to manage cryptographic keys and perform AES-GCM encryption/decryption.
 *   **Modern UI:** Built with **Jetpack Compose**, featuring a clean interface for testing real-time data encryption and retrieval.
 *   **Dependency Injection:** Uses **Hilt** for clean architecture and easy management of encryption components and DataStore instances.
@@ -44,7 +44,7 @@ A robust Android demonstration project showcasing how to implement secure, encry
 ## ⭐ Stargazers
 
 If you find this security implementation helpful, please give it a star!
-[Stargazers on GitHub](https://github.com/NicosNicolaou16/DataStoreEncryption/stargazers)
+[Stargazers on GitHub](https://github.com/NicosNicolaou16/Preferences-Data-Store-Encryption/stargazers)
 
 ## 🙏 Support & Contributions
 
