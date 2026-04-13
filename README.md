@@ -66,6 +66,13 @@ private val aeadSerializer = AeadSerializer(
 ### 3. Instantiate the DataStore
 Finally, use the `dataStore` delegate with the custom `aeadSerializer`.
 
+```Kotlin
+private val Context.encryptedPrefsDataStore: DataStore<Preferences> by dataStore(
+        fileName = "user_preferences.json",
+        serializer = aeadSerializer
+    )
+```
+
 ## 🔧 Versioning
 
 - **Target SDK:** **36**
