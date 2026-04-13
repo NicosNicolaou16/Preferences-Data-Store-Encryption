@@ -28,6 +28,23 @@ A robust Android demonstration project showcasing how to implement secure, encry
 - **Dependency Injection:** [Hilt](https://dagger.dev/hilt/)
 - **Asynchronicity:** [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) & [Flow](https://kotlinlang.org/docs/flow.html)
 
+## 🚀 Setup & Encryption Initialization
+
+To initialize the encrypted DataStore, the project follows the modern approach of wrapping the standard serializer with an AEAD (Authenticated Encryption with Associated Data) layer.
+
+### 1. Initialize Tink and Keyset Manager
+We register the AEAD configuration and use the `AndroidKeysetManager`
+
+```Kotlin
+private val keysetHandle =
+        AndroidKeysetManager.Builder()
+            .withSharedPref(context, "keyset", "keyset_prefs")
+            .withKeyTemplate(KeyTemplate.createFrom(PredefinedAeadParameters.AES256_GCM))
+            .withMasterKeyUri("android-keystore://master_key")
+            .build()
+            .keysetHandle
+```
+
 ## 🔧 Versioning
 
 - **Target SDK:** **36**
