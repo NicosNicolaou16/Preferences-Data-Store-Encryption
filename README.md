@@ -40,6 +40,10 @@ To initialize the encrypted DataStore, the project follows the modern approach o
 We register the AEAD configuration and use the `AndroidKeysetManager`
 
 ```Kotlin
+init {
+  AeadConfig.register()
+}
+
 private val keysetHandle =
         AndroidKeysetManager.Builder()
             .withSharedPref(context, "keyset", "keyset_prefs")
