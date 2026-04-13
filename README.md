@@ -45,6 +45,24 @@ private val keysetHandle =
             .keysetHandle
 ```
 
+### 2. Configure the AeadSerializer
+The `AeadSerializer` acts as a wrapper around the standard `PreferencesFileSerializer`, ensuring all data written to disk is encrypted and all data read is decrypted.
+
+```Kotlin
+private val aeadSerializer = AeadSerializer(
+        // Use tink APIs to create an Aead object to encrypt/decrypt data.
+        aead =
+            keysetHandle.getPrimitive(
+                RegistryConfiguration.get(),
+                Aead::class.java,
+            ),
+        // AeadSerializer can wrap an existing serializer.
+        wrappedSerializer = PreferencesFileSerializer,
+        // Specify a unique name to prevent a ciphertext swapping attack.
+        associatedData = "settings.json".encodeToByteArray(),
+    )
+```
+
 ## 🔧 Versioning
 
 - **Target SDK:** **36**
