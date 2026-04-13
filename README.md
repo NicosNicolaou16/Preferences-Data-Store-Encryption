@@ -91,8 +91,8 @@ private val Context.encryptedPrefsDataStore: DataStore<Preferences> by dataStore
 ## 📚 References & Resources
 
 - **Official Documentation:** [DataStore Guide](https://developer.android.com/topic/libraries/architecture/datastore)
+- **Official Release Notes:** [DataStore Release Notes](https://developer.android.com/jetpack/androidx/releases/datastore?utm_source=android-studio-app&utm_medium=app#1.3.0-alpha07)
 - **Security Best Practices:** [EncryptedSharedPreferences vs DataStore](https://developer.android.com/training/articles/keystore)
-- **Inspiration:** Following Google's modern Android development (MAD) recommendations.
 
 ## ⭐ Stargazers
 
