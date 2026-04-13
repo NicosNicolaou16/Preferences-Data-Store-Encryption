@@ -11,7 +11,7 @@
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@nicosnicolaou16)
 [![Google Developer Profile](https://img.shields.io/badge/Developer_Profile-blue?style=for-the-badge&label=Google)](https://g.dev/nicolaou_nicos)
 
-A robust Android demonstration project showcasing how to implement secure, encrypted data storage using **Jetpack DataStore** and **AES encryption**. This project highlights best practices for protecting sensitive user information at rest.
+A robust Android demonstration project showcasing the **new official Android solution** for secure, encrypted data storage. This implementation leverages **Jetpack DataStore** in combination with **Google Tink (AEAD)** to provide a modern, hardware-backed encryption layer for protecting sensitive user information at rest.
 
 > [!IMPORTANT]  
 > A similar project is also available **without** encryption!  
