@@ -21,7 +21,6 @@ A robust Android demonstration project showcasing how to implement secure, encry
 
 *   **Secure Storage:** Implements **Jetpack DataStore (Preferences)** for typed data storage with an added layer of encryption.
 *   **AES Encryption:** Utilizes the **Android Keystore System** to manage cryptographic keys and perform AES-GCM encryption/decryption.
-*   **Modern UI:** Built with **Jetpack Compose**, featuring a clean interface for testing real-time data encryption and retrieval.
 *   **Dependency Injection:** Uses **Hilt** for clean architecture and easy management of encryption components and DataStore instances.
 
 ## 🛠️ Tech Stack & Libraries
