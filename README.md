@@ -13,6 +13,10 @@
 
 A robust Android demonstration project showcasing how to implement secure, encrypted data storage using **Jetpack DataStore** and **AES encryption**. This project highlights best practices for protecting sensitive user information at rest.
 
+> [!IMPORTANT]  
+> A similar project is also available **without** encryption!  
+> 👉 **[Data-Store-Setup](https://github.com/NicosNicolaou16/Data-Store-Setup)** 👈
+
 ## ✨ Features
 
 *   **Secure Storage:** Implements **Jetpack DataStore (Preferences)** for typed data storage with an added layer of encryption.
