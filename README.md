@@ -25,11 +25,12 @@ A robust Android demonstration project showcasing the **new official Android sol
 
 ## 🛠️ Tech Stack & Libraries
 
-- **UI:** [Jetpack Compose](https://developer.android.com/develop/ui/compose)
-- **Storage:** [Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore) (Preferences DataStore)
-- **Security:** [Android Keystore System](https://developer.android.com/training/articles/keystore), AES-GCM Encryption
-- **Dependency Injection:** [Hilt](https://dagger.dev/hilt/)
-- **Asynchronicity:** [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) & [Flow](https://kotlinlang.org/docs/flow.html)
+- **UI:** [Jetpack Compose](https://developer.android.com/develop/ui/compose).
+- **Storage:** [Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore) (Preferences DataStore).
+- **Security:** [Android Keystore System](https://developer.android.com/training/articles/keystore), AES-GCM Encryption.
+- **Dependency Injection:** [Hilt](https://dagger.dev/hilt/).
+- **Asynchronicity:** [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) & [Flow](https://kotlinlang.org/docs/flow.html).
+- **[R8](https://developer.android.com/build/shrink-code)**: A code shrinker that reduces your app's size by removing unused code and resources.
 
 ## 🚀 Setup & Encryption Initialization
 
