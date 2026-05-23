@@ -7,16 +7,15 @@ plugins {
 
 android {
     namespace = "com.nicos.datastoreencryption"
+    buildToolsVersion = "37.0.0"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     defaultConfig {
         applicationId = "com.nicos.datastoreencryption"
         minSdk = 28
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
