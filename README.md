@@ -83,7 +83,7 @@ private val Context.encryptedPrefsDataStore: DataStore<Preferences> by dataStore
 
 ## 🔧 Versioning
 
-- **Data Store Version:** **1.3.0-alpha08**
+- **Data Store Version:** **1.3.0-alpha09**
 - **Target SDK:** **36**
 - **Minimum SDK:** **28**
 - **Kotlin Version:** **2.3.21**
