@@ -14,7 +14,7 @@
 A robust Android demonstration project showcasing the **new official Android solution** for secure, encrypted data storage. This implementation leverages **Jetpack DataStore** in combination with **Google Tink (AEAD)** to provide a modern, hardware-backed encryption layer for protecting sensitive user information at rest.
 
 > [!IMPORTANT]  
-> > For a detailed guide on the setup and implementation, check out my article on Medium::  
+> For a detailed guide on the setup and implementation, check out my article on Medium::  
 > 👉 **[Encrypted Preferences DataStore- Medium](https://medium.com/@nicosnicolaou/encrypted-preferences-datastore-442ba4d1dabe)** 👈
 
 > [!IMPORTANT]  
